@@ -18,9 +18,9 @@ namespace :site do
       "destination" => "_site"
     })).process
     
-    system "touch _site/CNAME"
+    # system "touch _site/CNAME"
     # system "echo 'karolinaczarnecka.pl' >> _site/CNAME"
-    system "echo dwoznicka.github.com/czarneckak >> _site/CNAME"
+    # system "echo dwoznicka.github.io/czarneckak >> _site/CNAME"
   end
 
 
