@@ -1,0 +1,25 @@
+@import 'scss/colors';
+@import 'scss/home';
+
+html, body {
+  margin: 0; padding: 0;
+}
+
+body,
+body * {
+  color: $brand-black;
+  font-family: 'Lato', sans-serif;
+}
+  
+body {
+  background: $brand-white;
+  background-size: contain;
+  background-repeat: repeat;
+  width: 100%;
+  max-width: 100%;
+}
+
+hr {
+  border-top: 4px solid rgba(255,255,255,.1);
+  width: 100%;
+}

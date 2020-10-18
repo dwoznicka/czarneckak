@@ -1,0 +1,168 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: base
+title: 'Oficjalna strona Karoliny Czarneckiej'
+---
+{% include navbar.html %}
+
+<div class="home-section hide hidden">
+  <div class="home-image-section">
+    <div class="home-image-container">
+      <img src="{{ 'KarolinaCzarnecka.jpg' | asset_path | absolute_url}}" alt="Karolina Czarnecka" title="Karolina Czarnecka">
+    </div>
+  </div>
+  <div class="home-media">
+    <ul class="home-mediaList">
+      <li class="home-mediaList-item">
+        <button class="home-mediaList-link" data-toggle="modal" data-target="#listen" >SŁUCHAJ</button>
+      </li>
+      <li class="home-mediaList-item">
+        <button class="home-mediaList-link" id="triggerVideos" data-toggle="modal" data-target="#video">TELEDYSKI</button>
+      </li>
+      <li class="home-mediaList-item">
+        <a class="home-mediaList-link" target="_blank" href="https://www.facebook.com/pg/KarolinaCzarneckaOfficial/events">KONCERTY</a>
+      </li>
+      <li class="home-mediaList-item">
+        <button class="home-mediaList-link" id="triggerActorVideos" data-toggle="modal" data-target="#actorVideo">AKTORSTWO</a>
+      </li>
+      <li class="home-mediaList-item">
+        <button class="home-mediaList-link" data-toggle="modal" data-target="#presspack" >PRESS</button>
+      </li>
+      <li class="home-mediaList-item">
+        <button class="home-mediaList-link" data-toggle="modal" data-target="#contact">KONTAKT</button>
+      </li>
+      <li class="home-mediaList-item">
+        <a class="home-mediaList-link" target="_blank" href="https://sklep.karolinaczarnecka.pl">SKLEP</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="contactLabel">Kontakt</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <div class="modal-body contact-body">
+            <p style="text-align:center;">
+              <a href="https://www.facebook.com/artgrupa1999/" target="_blank"><b>AGENCJA ARTYSTYCZNA MUZA</b></a><br/>
+              <i>Bartosz Rzepczyński</i><br/>
+              <span><a href="mailto:bartosz@artmuza.net">BARTOSZ@ARTMUZA.NET</a></span>
+              <span><a href="tel:+48502226143">+48 502 226 143</a> <br/>
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="listen" tabindex="-1" role="dialog" aria-labelledby="listenLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="listenLabel">Słuchaj</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <div class="modal-body" style="padding: 20px;">
+            <p style="text-align:center;">
+              <a class="listen-link" href="https://kayaxmusic.lnk.to/Cud/widget" target="_blank"><b>CUD</b></a><br/>
+              <a class="listen-link" href="https://independentdigital.lnk.to/Solarium" target="_blank"><b>Solarium 2.0</b></a><br/>
+              <a class="listen-link" href="https://music.youtube.com/playlist?list=OLAK5uy_kEAKLByfHW6DT-UabeyQYOUikx9NLjDLA" target="_blank"><b>Córka</b></a>
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="videoLabel" aria-hidden="true">
+  <div class="modal-dialog video-dialog" id="videoDialog" role="document">
+      <div class="modal-content">
+
+          <div class="modal-body videoGallery">
+            {% assign videos = site.data.videos | sort:"position" %}
+
+            {% for video in videos %}
+                <div class="music-video-container">
+                  <iframe id="iframe{{ video.position }}" class="videoIframe" src="{{ video.url }}?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"  style="z-index: 100; width: 82vw; max-width: 880px; height: 65vh; max-height: 1200px;"></iframe><br/>
+                  <p>{{ video.title }}</p>
+                </div>
+
+            {% endfor %}
+          </div>
+          <ul style="list-style: none; padding: 0;">
+            <li class="prev" onClick="stopYoutube();"></li>
+            <li class="next" onClick="stopYoutube();"></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="actorVideo" tabindex="-1" role="dialog" aria-labelledby="actorVideoLabel" aria-hidden="true">
+  <div class="modal-dialog video-dialog" id="actorVideoDialog" role="document">
+      <div class="modal-content">
+
+          <div class="modal-body actorVideoGallery">
+            {% assign videos = site.data.actor_videos | sort:"position" %}
+
+            {% for video in videos %}
+                <div class="music-video-container">
+                  <iframe id="iframe{{ video.position }}" class="videoIframe" src="{{ video.url }}?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"  style="z-index: 100; width: 82vw; max-width: 880px; height: 65vh; max-height: 1200px;"></iframe><br/>
+                </div>
+
+            {% endfor %}
+          </div>
+          <ul style="list-style: none; padding: 0;">
+            <li class="prev" onClick="stopYoutube();"></li>
+            <li class="next" onClick="stopYoutube();"></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="presspack" tabindex="-1" role="dialog" aria-labelledby="presspackLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <div class="modal-body" style="padding: 20px;">
+            <p style="text-align:center;">
+              <a class="listen-link" href="#" target="_blank"><b>Pobierz Press Pack</b></a>
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer class="hide hidden">
+  <div class="footer-background">
+    <div class="container">
+      <div class="row shb-footer-spacer is-vertical-center">
+        <div class="col-sm-12 col-md-4 footer-social-container">
+          <div class="footer-social">
+			      <div class="shb-footer-social-icons">
+            	<a href="https://www.facebook.com/KarolinaCzarneckaOfficial" aria-label="Facebook" target="_blank" rel="noopener nofolow"><i class="fab fa-instagram"></i></a>
+				      <a href="https://www.instagram.com/karolina_czarnecka_/" aria-label="Instagram" target="_blank" rel="noopener nofolow"><i class="fab fa-facebook-square"></i></a>
+				      <a href="https://www.youtube.com/channel/UCAIg59v5FJVdgG9La-ECGlA" aria-label="Youtube" target="_blank" rel="noopener nofolow"><i class="fab fa-youtube"></i></a>
+				    </div>
+          </div>
+        </div>
+      <div class="col-sm-12 col-md-8">
+        <p class="footer-copyright">Copyright © 2020 Karolina Czarnecka</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
