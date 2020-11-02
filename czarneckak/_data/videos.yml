@@ -1,27 +1,47 @@
+- url: 'https://www.youtube.com/embed/VvaxrExzvOs'
+  title: 'Karolina Czarnecka feat. Sarius – Pielgrzymka / prod. Sw@da (Official Video)'
+  position: 0
+
+- url: 'https://www.youtube.com/embed/1lNbqopAm50'
+  title: 'Karolina Czarnecka - Módl się za nami (Official Live Video)'
+  position: 1
+
+- url: 'https://www.youtube.com/embed/XDPhPbJfpR8'
+  title: 'Karolina Czarnecka – Polska musi uwierzyć w miłość / prod. Winne-2 (Vertical Video)'
+  position: 2
+
+- url: 'https://www.youtube.com/embed/Z2it2DKiSjA'
+  title: 'Karolina Czarnecka - Trzydzieści (Official Lyric Video)'
+  position: 3
+
+- url: 'https://www.youtube.com/embed/GFygQ1B0Z3E'
+  title: 'Karolina Czarnecka - Módl się za nami (Official Video)'
+  position: 4
+
 - url: 'https://www.youtube.com/embed/Di13plDKzpE'
   title: 'Karolina Czarnecka - Dom /prod. Sw@da/ (live video)'
-  position: 0
+  position: 5
 
 - title: 'Karolina Czarnecka + UV - Anaruk (official video)'
   url: 'https://www.youtube.com/embed/agc_pOojTvQ'
-  position: 1
+  position: 6
 
 - url: 'https://www.youtube.com/embed/AHxKovUEu_E'
   title: 'Karolina Czarnecka + UV - Marsz śmieci (official music visual)'
-  position: 2
+  position: 7
 
 - url: 'https://www.youtube.com/embed/1Dl-4D6qwLI'
   title: 'Karolina Czarnecka + UV - Mój pokój (official video)'
-  position: 3
+  position: 8
 
 - url: 'https://www.youtube.com/embed/iQ9dELvjepk'
   title: 'Karolina Czarnecka - Hej, hej, cześć (official audio)'
-  position: 4
+  position: 9
 
 - url: 'https://www.youtube.com/embed/gzdi_iGsjHI'
   title: 'Karolina Czarnecka feat. L.U.C. - Demakijaż (official video)'
-  position: 5
+  position: 10
 
 - url: 'https://www.youtube.com/embed/i_yIxAsR534'
   title: 'Karolina Czarnecka - Hera koka hasz LSD (official video)'
-  position: 6
+  position: 11

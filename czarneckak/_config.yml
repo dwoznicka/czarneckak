@@ -2,8 +2,8 @@ title: Karolina Czarnecka
 name: Oficjalna witryna
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://localhost:4000" # development
-url: "https://karolinaczarnecka.pl" # production
-# url: "https://dwoznicka.github.io/czarneckak" # github pages
+# url: "https://karolinaczarnecka.pl" # production
+url: "https://dwoznicka.github.io/czarneckak" # github pages
 
 copyright: 2020 © <a href="https://karolinaczarnecka.pl" class="site-link">Karolina Czarnecka</a>. Wszelkie prawa zastrzeżone.
 copyright_short: 2020 © <a href="https://karolinaczarnecka.pl" class="site-link">Karolina Czarnecka</a>.

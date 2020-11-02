@@ -36,6 +36,9 @@ title: 'Oficjalna strona Karoliny Czarneckiej'
       <li class="home-mediaList-item">
         <a class="home-mediaList-link" target="_blank" href="https://sklep.karolinaczarnecka.pl">SKLEP</a>
       </li>
+      <li class="home-mediaList-item">
+        <a class="home-mediaList-link" target="_blank" href="https://www.instagram.com/to_my_cory" style="color: rgb(238, 147, 206);">CÓRY</a>
+      </li>
     </ul>
   </div>
 </div>
@@ -74,9 +77,9 @@ title: 'Oficjalna strona Karoliny Czarneckiej'
 
           <div class="modal-body" style="padding: 20px;">
             <p style="text-align:center;">
-              <a class="listen-link" href="https://kayaxmusic.lnk.to/Cud/widget" target="_blank"><b>CUD</b></a><br/>
+              <a class="listen-link" href="https://kayaxmusic.lnk.to/Cud" target="_blank"><b>CUD</b></a><br/>
               <a class="listen-link" href="https://independentdigital.lnk.to/Solarium" target="_blank"><b>Solarium 2.0</b></a><br/>
-              <a class="listen-link" href="https://music.youtube.com/playlist?list=OLAK5uy_kEAKLByfHW6DT-UabeyQYOUikx9NLjDLA" target="_blank"><b>Córka</b></a>
+              <a class="listen-link" href="https://open.spotify.com/album/0cf6RFcditA2nmUEbBQE59?si=VnMhSwUcQLGEa2LeENNWnA" target="_blank"><b>Córka</b></a>
             </p>
           </div>
       </div>
@@ -86,7 +89,12 @@ title: 'Oficjalna strona Karoliny Czarneckiej'
 <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="videoLabel" aria-hidden="true">
   <div class="modal-dialog video-dialog" id="videoDialog" role="document">
       <div class="modal-content">
-
+        <div class="modal-header">
+          <h5 class="modal-title" id="listenLabel">Teledyski</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
           <div class="modal-body videoGallery">
             {% assign videos = site.data.videos | sort:"position" %}
 
@@ -109,7 +117,12 @@ title: 'Oficjalna strona Karoliny Czarneckiej'
 <div class="modal fade" id="actorVideo" tabindex="-1" role="dialog" aria-labelledby="actorVideoLabel" aria-hidden="true">
   <div class="modal-dialog video-dialog" id="actorVideoDialog" role="document">
       <div class="modal-content">
-
+        <div class="modal-header">
+          <h5 class="modal-title" id="listenLabel">Aktorstwo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
           <div class="modal-body actorVideoGallery">
             {% assign videos = site.data.actor_videos | sort:"position" %}
 
@@ -139,7 +152,7 @@ title: 'Oficjalna strona Karoliny Czarneckiej'
 
           <div class="modal-body" style="padding: 20px;">
             <p style="text-align:center;">
-              <a class="listen-link" href="#" target="_blank"><b>Pobierz Press Pack</b></a>
+              <a class="listen-link" href="https://www.dropbox.com/sh/shar9flbxug5wi0/AABvhiMXo6E2SUP8jkdncgwza" target="_blank"><b>Pobierz Press Pack</b></a>
             </p>
           </div>
       </div>
